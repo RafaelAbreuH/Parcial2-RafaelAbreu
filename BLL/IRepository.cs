@@ -15,4 +15,5 @@ namespace Parcial2_RafaelAbreu.BLL
         bool Modificar(T entity);
         bool Elimimar(int id);
     }
+
 }
