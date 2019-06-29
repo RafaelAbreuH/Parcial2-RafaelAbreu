@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parcial2_RafaelAbreu.UI.Resgistros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,20 @@ namespace Parcial2_RafaelAbreu
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void AsignaturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rAsignaturas ver = new rAsignaturas();
+            ver.MdiParent = this;
+            ver.Show();
+        }
+
+        private void EstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rEstudiantes ver = new rEstudiantes();
+            ver.MdiParent = this;
+            ver.Show();
         }
     }
 }

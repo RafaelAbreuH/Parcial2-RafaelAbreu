@@ -128,14 +128,15 @@ namespace Parcial2_RafaelAbreu.UI.Resgistros
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
+            errorProvider.Clear();
             try
             {
                 if (IdnumericUpDown.Value > 0)
                 {
                     if (db.Eliminar((int)IdnumericUpDown.Value))
                     {
-                        MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
+                        MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                         MessageBox.Show("No se puede eliminar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
