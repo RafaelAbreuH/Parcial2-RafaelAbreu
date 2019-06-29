@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parcial2_RafaelAbreu.DAL;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -85,7 +86,7 @@ namespace Parcial2_RafaelAbreu.BLL
             return lista;
 
         }
-        public virtual bool Elimimar(int id)
+        public virtual bool Eliminar(int id)
         {
             bool paso = false;
 

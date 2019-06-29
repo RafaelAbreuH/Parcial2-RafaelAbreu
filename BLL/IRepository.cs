@@ -13,7 +13,7 @@ namespace Parcial2_RafaelAbreu.BLL
         T Buscar(int id);
         bool Guardar(T entity);
         bool Modificar(T entity);
-        bool Elimimar(int id);
+        bool Eliminar(int id);
     }
 
 }
