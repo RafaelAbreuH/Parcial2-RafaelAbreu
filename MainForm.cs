@@ -31,5 +31,12 @@ namespace Parcial2_RafaelAbreu
             ver.MdiParent = this;
             ver.Show();
         }
+
+        private void InscripcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rInscripcion ver = new rInscripcion();
+            ver.MdiParent = this;
+            ver.Show();
+        }
     }
 }

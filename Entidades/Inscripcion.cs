@@ -14,7 +14,19 @@ namespace Parcial2_RafaelAbreu.Entidades
         public int EstudianteId { get; set; }
         public DateTime Fecha { get; set; }
         public decimal Monto { get; set; }
-        public virtual List<InscripcionDetalle> Asiganturas { get; set; }
+        public virtual List<InscripcionDetalle> Asignaturas { get; set; }
+
+        public void CalcularMonto()
+        {
+            decimal total = 0;
+
+            foreach (var item in Asignaturas)
+            {
+                total += item.SubTotal;
+            }
+
+            Monto = total;
+        }
 
         public Inscripcion()
         {
@@ -22,7 +34,7 @@ namespace Parcial2_RafaelAbreu.Entidades
             EstudianteId = 0;
             Fecha = DateTime.Now;
             Monto = 0;
-            Asiganturas = new List<InscripcionDetalle>();
+            Asignaturas = new List<InscripcionDetalle>();
         }
     }
 }
