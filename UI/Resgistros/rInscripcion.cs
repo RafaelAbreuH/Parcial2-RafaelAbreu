@@ -162,6 +162,39 @@ namespace Parcial2_RafaelAbreu.UI.Resgistros
             }
         }
 
+        private void SumarMonto()
+        {
+            List<InscripcionDetalle> detalle = new List<InscripcionDetalle>();
+
+            if (detalleDataGridView.DataSource != null)
+            {
+                detalle = (List<InscripcionDetalle>)detalleDataGridView.DataSource;
+            }
+            decimal Total = 0;
+            foreach (var item in detalle)
+            {
+                Total += item.SubTotal;
+            }
+            BalancetextBox.Text = Total.ToString();
+        }
+
+        private void BajarMonto()
+        {
+            List<InscripcionDetalle> detalle = new List<InscripcionDetalle>();
+
+            if (detalleDataGridView.DataSource != null)
+            {
+                detalle = (List<InscripcionDetalle>)detalleDataGridView.DataSource;
+            }
+            decimal Total = 0;
+            foreach (var item in detalle)
+            {
+                Total -= item.SubTotal;
+            }
+            Total *= (-1);
+            BalancetextBox.Text = Total.ToString();
+        }
+
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
             Inscripcion inscripcion = new Inscripcion() ;
@@ -188,6 +221,7 @@ namespace Parcial2_RafaelAbreu.UI.Resgistros
                 });
                 CargarGrid();
             }
+            SumarMonto();
         }
 
         // DURE 3 DIAS TRATAnDO DE QUE ESTO FUNCIONARA.... ME FALTABA el +1 cuando seleccionaba el Index del combobox porque empieza por 0
@@ -214,6 +248,7 @@ namespace Parcial2_RafaelAbreu.UI.Resgistros
                 Detalle.RemoveAt(detalleDataGridView.CurrentRow.Index);
                 CargarGrid();
             }
+            BajarMonto();
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
@@ -267,5 +302,9 @@ namespace Parcial2_RafaelAbreu.UI.Resgistros
             Limpiar();
         }
 
+        private void DetalleDataGridView_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+
+        }
     }
 }

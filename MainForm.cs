@@ -1,4 +1,5 @@
-﻿using Parcial2_RafaelAbreu.UI.Resgistros;
+﻿using Parcial2_RafaelAbreu.UI.Consulta;
+using Parcial2_RafaelAbreu.UI.Resgistros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,27 @@ namespace Parcial2_RafaelAbreu
         private void InscripcionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rInscripcion ver = new rInscripcion();
+            ver.MdiParent = this;
+            ver.Show();
+        }
+
+        private void AsignaturaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cAsignatura ver = new cAsignatura();
+            ver.MdiParent = this;
+            ver.Show();
+        }
+
+        private void Estudi9an9te7ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cEstudiante ver = new cEstudiante();
+            ver.MdiParent = this;
+            ver.Show();
+        }
+
+        private void InscripcionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cInscripcion ver = new cInscripcion();
             ver.MdiParent = this;
             ver.Show();
         }

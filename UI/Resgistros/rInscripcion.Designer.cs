@@ -264,6 +264,7 @@
             this.detalleDataGridView.RowTemplate.Height = 24;
             this.detalleDataGridView.Size = new System.Drawing.Size(331, 147);
             this.detalleDataGridView.TabIndex = 0;
+            this.detalleDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.DetalleDataGridView_RowsAdded);
             // 
             // errorProvider
             // 

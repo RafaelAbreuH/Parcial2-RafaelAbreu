@@ -97,18 +97,21 @@
             this.asignaturaToolStripMenuItem1.Name = "asignaturaToolStripMenuItem1";
             this.asignaturaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.asignaturaToolStripMenuItem1.Text = "Asignatura";
+            this.asignaturaToolStripMenuItem1.Click += new System.EventHandler(this.AsignaturaToolStripMenuItem1_Click);
             // 
             // estudi9an9te7ToolStripMenuItem
             // 
             this.estudi9an9te7ToolStripMenuItem.Name = "estudi9an9te7ToolStripMenuItem";
             this.estudi9an9te7ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.estudi9an9te7ToolStripMenuItem.Text = "Estudiantes";
+            this.estudi9an9te7ToolStripMenuItem.Click += new System.EventHandler(this.Estudi9an9te7ToolStripMenuItem_Click);
             // 
             // inscripcionToolStripMenuItem1
             // 
             this.inscripcionToolStripMenuItem1.Name = "inscripcionToolStripMenuItem1";
             this.inscripcionToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.inscripcionToolStripMenuItem1.Text = "Inscripcion";
+            this.inscripcionToolStripMenuItem1.Click += new System.EventHandler(this.InscripcionToolStripMenuItem1_Click);
             // 
             // MainForm
             // 

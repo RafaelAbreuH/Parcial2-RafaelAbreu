@@ -38,20 +38,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.FechaCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // FiltrocomboBox
             // 
+            this.FiltrocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltrocomboBox.FormattingEnabled = true;
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "Todo",
             "Id",
             "Nombre",
             "Balance"});
-            this.FiltrocomboBox.Location = new System.Drawing.Point(223, 19);
+            this.FiltrocomboBox.Location = new System.Drawing.Point(276, 17);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
-            this.FiltrocomboBox.Size = new System.Drawing.Size(178, 21);
+            this.FiltrocomboBox.Size = new System.Drawing.Size(137, 21);
             this.FiltrocomboBox.TabIndex = 42;
             // 
             // HastadateTimePicker
@@ -103,15 +105,16 @@
             // 
             // CriteriotextBox
             // 
-            this.CriteriotextBox.Location = new System.Drawing.Point(416, 18);
+            this.CriteriotextBox.Location = new System.Drawing.Point(437, 17);
             this.CriteriotextBox.Name = "CriteriotextBox";
-            this.CriteriotextBox.Size = new System.Drawing.Size(193, 20);
+            this.CriteriotextBox.Size = new System.Drawing.Size(159, 20);
             this.CriteriotextBox.TabIndex = 35;
+            this.CriteriotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CriteriotextBox_KeyPress_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(413, 3);
+            this.label2.Location = new System.Drawing.Point(434, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 34;
@@ -120,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(220, 4);
+            this.label1.Location = new System.Drawing.Point(273, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 33;
@@ -130,7 +133,7 @@
             // 
             this.Buscarbutton.Image = global::Parcial2_RafaelAbreu.Properties.Resources.search_13_16;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(629, 15);
+            this.Buscarbutton.Location = new System.Drawing.Point(617, 15);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
             this.Buscarbutton.TabIndex = 36;
@@ -139,11 +142,22 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
+            // FechaCheckBox
+            // 
+            this.FechaCheckBox.AutoSize = true;
+            this.FechaCheckBox.Location = new System.Drawing.Point(214, 21);
+            this.FechaCheckBox.Name = "FechaCheckBox";
+            this.FechaCheckBox.Size = new System.Drawing.Size(56, 17);
+            this.FechaCheckBox.TabIndex = 54;
+            this.FechaCheckBox.Text = "Fecha";
+            this.FechaCheckBox.UseVisualStyleBackColor = true;
+            // 
             // cEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 399);
+            this.ClientSize = new System.Drawing.Size(713, 407);
+            this.Controls.Add(this.FechaCheckBox);
             this.Controls.Add(this.FiltrocomboBox);
             this.Controls.Add(this.HastadateTimePicker);
             this.Controls.Add(this.label4);
@@ -174,5 +188,6 @@
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox FechaCheckBox;
     }
 }
