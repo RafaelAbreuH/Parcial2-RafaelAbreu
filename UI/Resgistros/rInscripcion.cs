@@ -1,4 +1,5 @@
 ﻿using Parcial2_RafaelAbreu.BLL;
+using Parcial2_RafaelAbreu.DAL;
 using Parcial2_RafaelAbreu.Entidades;
 using System;
 using System.Collections.Generic;
@@ -196,7 +197,7 @@ namespace Parcial2_RafaelAbreu.UI.Resgistros
             Asignaturas a = new Asignaturas();
             RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
             a = db.Buscar(id);
-            CreditotextBox.Text = a.Creditos.ToString();
+           CreditotextBox.Text = a.Creditos.ToString();
            
         }
 
@@ -226,6 +227,7 @@ namespace Parcial2_RafaelAbreu.UI.Resgistros
                 {
                     if (db.Eliminar((int)InscripcionIdnumericUpDown.Value))
                     {
+                       
                         Limpiar();
                         MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

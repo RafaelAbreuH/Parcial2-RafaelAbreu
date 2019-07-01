@@ -105,14 +105,17 @@ namespace Parcial2_RafaelAbreu.BLL
 
             try
             {
-                var eliminar = db.Inscripcion.Find(id);
-                var estudiante = dbE.Buscar(eliminar.EstudianteId);
-                eliminar.CalcularMonto();
+                Inscripcion inscripcion = db.Inscripcion.Find(id);
+                db.Estudiante.Find(inscripcion.EstudianteId).Balance -= inscripcion.Monto;
+                db.Inscripcion.Remove(inscripcion);
+                //var eliminar = db.Inscripcion.Find(id);
+                //var estudiante = dbE.Buscar(eliminar.EstudianteId);
+                //eliminar.CalcularMonto();
 
-                estudiante.Balance -= eliminar.Monto;
+                //estudiante.Balance -= eliminar.Monto;
                 //dbE.Modificar(estudiante);
 
-                db.Entry(eliminar).State = EntityState.Deleted;
+             //   db.Entry(eliminar).State = EntityState.Deleted;
                 paso = db.SaveChanges() > 0;
 
 
